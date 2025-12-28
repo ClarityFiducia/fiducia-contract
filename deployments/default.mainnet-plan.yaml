@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: fiducia
+            expected-sender: SP237HRZEM03XCG4TJMYMBT0J0FPY90MS1HB48YTM
+            cost: 66760
+            path: contracts/fiducia.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"
